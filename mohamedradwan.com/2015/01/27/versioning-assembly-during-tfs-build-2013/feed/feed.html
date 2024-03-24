@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Versioning Assembly during TFS Build 2013	</title>
+	<atom:link href="https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/feed/" rel="self" type="application/rss+xml" />
+	<link>https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/</link>
+	<description>Automate your best experience</description>
+	<lastBuildDate>Mon, 18 Mar 2019 10:46:07 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.3</generator>
+	<item>
+		<title>
+		By: Matt W		</title>
+		<link>https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/#comment-392</link>
+
+		<dc:creator><![CDATA[Matt W]]></dc:creator>
+		<pubDate>Wed, 15 Jul 2015 17:51:20 +0000</pubDate>
+		<guid isPermaLink="false">http://mohamedradwan.com/?p=4829#comment-392</guid>
+
+					<description><![CDATA[I&#039;m not sure if the response was meant for me, but I&#039;ve been trying pre and post build scripts.  I am able to get the output binaries versioned as desired, but I would like to preserve that information in the AssemblyInfo file with checkin, but that is what I cannot get to work.]]></description>
+			<content:encoded><![CDATA[<p>I&#8217;m not sure if the response was meant for me, but I&#8217;ve been trying pre and post build scripts.  I am able to get the output binaries versioned as desired, but I would like to preserve that information in the AssemblyInfo file with checkin, but that is what I cannot get to work.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Mohamed Radwan (MVP)		</title>
+		<link>https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/#comment-391</link>
+
+		<dc:creator><![CDATA[Mohamed Radwan (MVP)]]></dc:creator>
+		<pubDate>Wed, 15 Jul 2015 13:41:13 +0000</pubDate>
+		<guid isPermaLink="false">http://mohamedradwan.com/?p=4829#comment-391</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/#comment-390&quot;&gt;Farrukh&lt;/a&gt;.
+
+This was existing project that use another process template with some old customization]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/#comment-390">Farrukh</a>.</p>
+<p>This was existing project that use another process template with some old customization</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Farrukh		</title>
+		<link>https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/#comment-390</link>
+
+		<dc:creator><![CDATA[Farrukh]]></dc:creator>
+		<pubDate>Wed, 15 Jul 2015 07:43:22 +0000</pubDate>
+		<guid isPermaLink="false">http://mohamedradwan.com/?p=4829#comment-390</guid>
+
+					<description><![CDATA[Why didn&#039;t you used TfvcTemplate.12.xaml? It simply allows you specify Post-Build script and its arguments and Pre-Build script and its arguments. You can simply specify your Powershell script in post or pre build and pass the required arguments there.
+I got TfvcTemplate.12.xaml shipped with 2013.]]></description>
+			<content:encoded><![CDATA[<p>Why didn&#8217;t you used TfvcTemplate.12.xaml? It simply allows you specify Post-Build script and its arguments and Pre-Build script and its arguments. You can simply specify your Powershell script in post or pre build and pass the required arguments there.<br />
+I got TfvcTemplate.12.xaml shipped with 2013.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: superfreak3		</title>
+		<link>https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/#comment-389</link>
+
+		<dc:creator><![CDATA[superfreak3]]></dc:creator>
+		<pubDate>Tue, 16 Jun 2015 13:30:55 +0000</pubDate>
+		<guid isPermaLink="false">http://mohamedradwan.com/?p=4829#comment-389</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/#comment-388&quot;&gt;Mohamed Radwan (MVP)&lt;/a&gt;.
+
+I&#039;ve been trying a ton of things, but I just can&#039;t get anything to work properly. I think maybe I can take the script described above and simply add a check-in step after the edit is made.  My hope that once the file is marked as writable and the file is edited, it will be checked out from TFS automatically for the edit.  A check-in is all that would be needed at the end of this script. ??
+
+Like I said, I&#039;ve been trying a bunch of different things...
+
+http://powershell.org/wp/forums/topic/checking-out-files-from-tfs-2013-using-powershell/
+http://stackoverflow.com/questions/30627417/checking-out-assemblyinfo-files-via-powershell-script?noredirect=1#comment49358837_30627417
+
+I&#039;m not really sure I have to have the versioning in the AI files checked in as some say the auto-labeling at build time will take care of that.  If a developer, at a later time, needs to manually compile something, he/she can look at the label to see what the latest compiled version was.  I still think I would like to have the actual info files contain the latest version information though.]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/#comment-388">Mohamed Radwan (MVP)</a>.</p>
+<p>I&#8217;ve been trying a ton of things, but I just can&#8217;t get anything to work properly. I think maybe I can take the script described above and simply add a check-in step after the edit is made.  My hope that once the file is marked as writable and the file is edited, it will be checked out from TFS automatically for the edit.  A check-in is all that would be needed at the end of this script. ??</p>
+<p>Like I said, I&#8217;ve been trying a bunch of different things&#8230;</p>
+<p><a href="http://powershell.org/wp/forums/topic/checking-out-files-from-tfs-2013-using-powershell/" rel="nofollow ugc">http://powershell.org/wp/forums/topic/checking-out-files-from-tfs-2013-using-powershell/</a><br />
+<a href="http://stackoverflow.com/questions/30627417/checking-out-assemblyinfo-files-via-powershell-script?noredirect=1#comment49358837_30627417" rel="nofollow ugc">http://stackoverflow.com/questions/30627417/checking-out-assemblyinfo-files-via-powershell-script?noredirect=1#comment49358837_30627417</a></p>
+<p>I&#8217;m not really sure I have to have the versioning in the AI files checked in as some say the auto-labeling at build time will take care of that.  If a developer, at a later time, needs to manually compile something, he/she can look at the label to see what the latest compiled version was.  I still think I would like to have the actual info files contain the latest version information though.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Mohamed Radwan (MVP)		</title>
+		<link>https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/#comment-388</link>
+
+		<dc:creator><![CDATA[Mohamed Radwan (MVP)]]></dc:creator>
+		<pubDate>Tue, 16 Jun 2015 09:21:22 +0000</pubDate>
+		<guid isPermaLink="false">http://mohamedradwan.com/?p=4829#comment-388</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/#comment-387&quot;&gt;Matt W&lt;/a&gt;.
+
+It sounds not bad .
+I think yes, you can modify the script to do check-in and check-out, you many leverage TFS.exe for doing that]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/#comment-387">Matt W</a>.</p>
+<p>It sounds not bad .<br />
+I think yes, you can modify the script to do check-in and check-out, you many leverage TFS.exe for doing that</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Matt W		</title>
+		<link>https://mohamedradwan.com/2015/01/27/versioning-assembly-during-tfs-build-2013/#comment-387</link>
+
+		<dc:creator><![CDATA[Matt W]]></dc:creator>
+		<pubDate>Tue, 02 Jun 2015 17:52:11 +0000</pubDate>
+		<guid isPermaLink="false">http://mohamedradwan.com/?p=4829#comment-387</guid>
+
+					<description><![CDATA[Hi there,
+
+I am attempting to bump versions in AssemblyInfo with each build and here are my thoughts...
+
+Run a pre-build power shell script to check-out Assembly Info files, modify the versioning information, then run a post-build script to check in the changes.  Does that sound reasonable or in line with any type of best practices?
+
+I also found this script...
+
+http://www.colinsalmcorner.com/post/matching-binary-version-to-build-number-version-in-tfs-2013-builds
+
+... which was easy to implement and worked nicely, but doesn&#039;t retain the changes in TFS (no check out/in.
+
+I&#039;m new to PowerShell so I hope to keep this as simple as possible.  Can the above mentioned script be modified to check out and maybe modify the File and Product versions separately.  I might need to leverage them separately down the road with Hotfix builds, etc.
+
+I hope you can help!!
+
+Thanks for any info you can provide!!]]></description>
+			<content:encoded><![CDATA[<p>Hi there,</p>
+<p>I am attempting to bump versions in AssemblyInfo with each build and here are my thoughts&#8230;</p>
+<p>Run a pre-build power shell script to check-out Assembly Info files, modify the versioning information, then run a post-build script to check in the changes.  Does that sound reasonable or in line with any type of best practices?</p>
+<p>I also found this script&#8230;</p>
+<p><a href="http://www.colinsalmcorner.com/post/matching-binary-version-to-build-number-version-in-tfs-2013-builds" rel="nofollow ugc">http://www.colinsalmcorner.com/post/matching-binary-version-to-build-number-version-in-tfs-2013-builds</a></p>
+<p>&#8230; which was easy to implement and worked nicely, but doesn&#8217;t retain the changes in TFS (no check out/in.</p>
+<p>I&#8217;m new to PowerShell so I hope to keep this as simple as possible.  Can the above mentioned script be modified to check out and maybe modify the File and Product versions separately.  I might need to leverage them separately down the road with Hotfix builds, etc.</p>
+<p>I hope you can help!!</p>
+<p>Thanks for any info you can provide!!</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

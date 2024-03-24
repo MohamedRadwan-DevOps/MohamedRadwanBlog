@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments for Automation Planet	</title>
+	<atom:link href="https://mohamedradwan.com/comments/feed/" rel="self" type="application/rss+xml" />
+	<link>https://mohamedradwan.com</link>
+	<description>Automate your best experience</description>
+	<lastBuildDate>Sat, 06 Aug 2022 11:18:42 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.3</generator>
+	<item>
+		<title>
+		Comment on About2 by sarra azizi		</title>
+		<link>https://mohamedradwan.com/about2/#comment-11855</link>
+
+		<dc:creator><![CDATA[sarra azizi]]></dc:creator>
+		<pubDate>Sun, 05 Sep 2021 21:45:01 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/Automation/?page_id=7#comment-11855</guid>
+
+					<description><![CDATA[[DOCKER][DOCKERFILE] :
+i am working on Docker project : we have api ( fast api ) which is working fine after pulling the image then running the the container: docker image pull toto/fastapi:1.0.0 docker container run -p 8000:8000 toto/fastapi:1.0.0
+
+the API is available on port 8000 of the host machine --&#062; i would like to run the tests on that API in a container , using Dockerfile :
+
+1)i created a folder : that contains the Dockerfile and my test script : 
+toto_image_test1: ____ 
+                                  &#124;______Dockerfile 
+                                  &#124;______script.py 
+Remarque : when i run my script of test locally with going through the container : it is working correctly and generating the output that i am looking for .
+
+i have built the image related to the api test : 
+docker image build -f Dockerfile . -t toto_image_test1:latest
+then when i run the container i face an issue : 
+here is the container that i run :
+ docker container run -it -d toto_image_test1:
+latest Here is the content of my Dockerfile :
+
+FROM toto/fastapi:1.0.0 
+ARG address 
+ENV address = &#039;0.0.0.0&#039; 
+RUN echo $address 
+CMD [&quot;Bash&quot;] 
+ARG port 
+ENV port = 8000 
+RUN echo $port 
+CMD [&quot;Bash&quot;] 
+ADD script.py /home/ubuntu/toto_image_test1/script.py 
+COPY   script.py   /home/ubuntu/script.py 
+WORKDIR /home/ubuntu 
+CMD python3 /home/ubuntu/script.py 
+RUN python3 /home/ubuntu/script.py &#038;
+
+--&#062; here is the first part of my script : 
+import os 
+import requests 
+import json 
+from requests.adapters
+ import HTTPAdapter from requests.packages.urllib3.util.retry import Retry 
+from time import sleep
+ api_port = os.environ.get(&#039;port&#039;) 
+print(&quot;api_port&quot;,api_port) api_address = os.environ.get(&#039;address&#039;) 
+print(&quot;api_address&quot;,api_address) pwd = os.environ.get(&#039;PWD&#039;) 
+print ( &#039;le path actuel ssssssssss&#039;,pwd)
+
+# requête authentication 
+r = &#039; &#039; 
+while r == &#039; &#039;: 
+  try:  
+    r = requests.get(url=&#039;http://0.0.0.0:8000/permissions&#039;.format(address=api_address, port=api_port),params= {&#039;username&#039;: 
+    &#039;XX&#039;,&#039;password&#039;: &#039;****&#039;}) 
+    print(&quot;request rrrrrrrr&quot;,r) 
+    break 
+except:
+ print(&quot;Connection refused by the server..&quot;)  
+print(&quot;Let me sleep for 5 seconds&quot;) 
+print(&quot;ZZzzzz...&quot;) #print(&quot;URL is &quot;,url) 
+print(&quot;r is rrrrrrrrr &quot;,r)  time.sleep(5) 
+print(&quot;Was a nice sleep, now let me continue...&quot;) 
+continue
+
+** the issue is that i alway find that &#039;r&#039; is always empty :the query never gives a result inside the container ,however it is working fine locally**]]></description>
+			<content:encoded><![CDATA[<p>[DOCKER][DOCKERFILE] :<br />
+i am working on Docker project : we have api ( fast api ) which is working fine after pulling the image then running the the container: docker image pull toto/fastapi:1.0.0 docker container run -p 8000:8000 toto/fastapi:1.0.0</p>
+<p>the API is available on port 8000 of the host machine &#8211;&gt; i would like to run the tests on that API in a container , using Dockerfile :</p>
+<p>1)i created a folder : that contains the Dockerfile and my test script :<br />
+toto_image_test1: ____<br />
+                                  |______Dockerfile<br />
+                                  |______script.py<br />
+Remarque : when i run my script of test locally with going through the container : it is working correctly and generating the output that i am looking for .</p>
+<p>i have built the image related to the api test :<br />
+docker image build -f Dockerfile . -t toto_image_test1:latest<br />
+then when i run the container i face an issue :<br />
+here is the container that i run :<br />
+ docker container run -it -d toto_image_test1:<br />
+latest Here is the content of my Dockerfile :</p>
+<p>FROM toto/fastapi:1.0.0<br />
+ARG address<br />
+ENV address = &#8216;0.0.0.0&#8217;<br />
+RUN echo $address<br />
+CMD [&#8220;Bash&#8221;]<br />
+ARG port<br />
+ENV port = 8000<br />
+RUN echo $port<br />
+CMD [&#8220;Bash&#8221;]<br />
+ADD script.py /home/ubuntu/toto_image_test1/script.py<br />
+COPY   script.py   /home/ubuntu/script.py<br />
+WORKDIR /home/ubuntu<br />
+CMD python3 /home/ubuntu/script.py<br />
+RUN python3 /home/ubuntu/script.py &amp;</p>
+<p>&#8211;&gt; here is the first part of my script :<br />
+import os<br />
+import requests<br />
+import json<br />
+from requests.adapters<br />
+ import HTTPAdapter from requests.packages.urllib3.util.retry import Retry<br />
+from time import sleep<br />
+ api_port = os.environ.get(&#8216;port&#8217;)<br />
+print(&#8220;api_port&#8221;,api_port) api_address = os.environ.get(&#8216;address&#8217;)<br />
+print(&#8220;api_address&#8221;,api_address) pwd = os.environ.get(&#8216;PWD&#8217;)<br />
+print ( &#8216;le path actuel ssssssssss&#8217;,pwd)</p>
+<p># requête authentication<br />
+r = &#8216; &#8216;<br />
+while r == &#8216; &#8216;:<br />
+  try:<br />
+    r = requests.get(url=&#8217;http://0.0.0.0:8000/permissions&#8217;.format(address=api_address, port=api_port),params= {&#8216;username&#8217;:<br />
+    &#8216;XX&#8217;,&#8217;password&#8217;: &#8216;****&#8217;})<br />
+    print(&#8220;request rrrrrrrr&#8221;,r)<br />
+    break<br />
+except:<br />
+ print(&#8220;Connection refused by the server..&#8221;)<br />
+print(&#8220;Let me sleep for 5 seconds&#8221;)<br />
+print(&#8220;ZZzzzz&#8230;&#8221;) #print(&#8220;URL is &#8220;,url)<br />
+print(&#8220;r is rrrrrrrrr &#8220;,r)  time.sleep(5)<br />
+print(&#8220;Was a nice sleep, now let me continue&#8230;&#8221;)<br />
+continue</p>
+<p>** the issue is that i alway find that &#8216;r&#8217; is always empty :the query never gives a result inside the container ,however it is working fine locally**</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on About2 by Eduardo Peláez		</title>
+		<link>https://mohamedradwan.com/about2/#comment-11853</link>
+
+		<dc:creator><![CDATA[Eduardo Peláez]]></dc:creator>
+		<pubDate>Thu, 02 Sep 2021 20:23:21 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/Automation/?page_id=7#comment-11853</guid>
+
+					<description><![CDATA[Hi! Your content is so nice and it is very useful to me, can you please tell me what is a good learning path to be an automation engineer? 
+
+Thank you]]></description>
+			<content:encoded><![CDATA[<p>Hi! Your content is so nice and it is very useful to me, can you please tell me what is a good learning path to be an automation engineer? </p>
+<p>Thank you</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on About2 by Chaitanya Vuppula		</title>
+		<link>https://mohamedradwan.com/about2/#comment-11834</link>
+
+		<dc:creator><![CDATA[Chaitanya Vuppula]]></dc:creator>
+		<pubDate>Tue, 20 Jul 2021 04:37:36 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/Automation/?page_id=7#comment-11834</guid>
+
+					<description><![CDATA[Hi Radwan,
+
+I have watched your video on Run Unit testing in a docker. I have implemented a .NET core solution for running selenium test cases. While running the container with Command - dotnet test 
+
+I&#039;m receiving this error - 
+
+ Given I open the Browser
+ -&#062; driverExecutablePath: /src/Drivers/
+ -&#062; error: The file /src/Drivers/chromedriver does not exist. The driver can be downloaded at http://chromedriver.storage.googleapis.com/index.html (0.1s)
+  Standard Error Messages:
+ The file /src/Drivers/chromedriver does not exist. The driver can be downloaded at http://chromedriver.storage.googleapis.com/index.html OpenQA.Selenium.DriverServiceNotFoundException: The file /src/Drivers/chromedriver does not exist. The driver can be downloaded at http://chromedriver.storage.googleapis.com/index.html
+
+Explanation of Chrome Driver in Selenium: 
+
+In C# while creating Chrome Driver we will give the directory path containing chromedriver.exe like - new ChromeDriver(&quot;folder path containing chromedriver.exe&quot;). 
+- In the local PC it is executing fine as &quot;chromedriver.exe&quot; will be added automatically to that folder path. 
+- But in the container it is not adding the .exe extension automatically and due to this I am receiving the error - &quot;The file /src/Drivers/chromedriver does not exist&quot;. If you see this message &quot;.exe&quot; is not added automatically, hence error.
+
+Any idea how to fix this issue? Appreciate your help.]]></description>
+			<content:encoded><![CDATA[<p>Hi Radwan,</p>
+<p>I have watched your video on Run Unit testing in a docker. I have implemented a .NET core solution for running selenium test cases. While running the container with Command &#8211; dotnet test </p>
+<p>I&#8217;m receiving this error &#8211; </p>
+<p> Given I open the Browser<br />
+ -&gt; driverExecutablePath: /src/Drivers/<br />
+ -&gt; error: The file /src/Drivers/chromedriver does not exist. The driver can be downloaded at <a href="http://chromedriver.storage.googleapis.com/index.html" rel="nofollow ugc">http://chromedriver.storage.googleapis.com/index.html</a> (0.1s)<br />
+  Standard Error Messages:<br />
+ The file /src/Drivers/chromedriver does not exist. The driver can be downloaded at <a href="http://chromedriver.storage.googleapis.com/index.html" rel="nofollow ugc">http://chromedriver.storage.googleapis.com/index.html</a> OpenQA.Selenium.DriverServiceNotFoundException: The file /src/Drivers/chromedriver does not exist. The driver can be downloaded at <a href="http://chromedriver.storage.googleapis.com/index.html" rel="nofollow ugc">http://chromedriver.storage.googleapis.com/index.html</a></p>
+<p>Explanation of Chrome Driver in Selenium: </p>
+<p>In C# while creating Chrome Driver we will give the directory path containing chromedriver.exe like &#8211; new ChromeDriver(&#8220;folder path containing chromedriver.exe&#8221;).<br />
+&#8211; In the local PC it is executing fine as &#8220;chromedriver.exe&#8221; will be added automatically to that folder path.<br />
+&#8211; But in the container it is not adding the .exe extension automatically and due to this I am receiving the error &#8211; &#8220;The file /src/Drivers/chromedriver does not exist&#8221;. If you see this message &#8220;.exe&#8221; is not added automatically, hence error.</p>
+<p>Any idea how to fix this issue? Appreciate your help.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on About2 by Mohamed Radwan		</title>
+		<link>https://mohamedradwan.com/about2/#comment-11794</link>
+
+		<dc:creator><![CDATA[Mohamed Radwan]]></dc:creator>
+		<pubDate>Mon, 11 Jan 2021 09:15:55 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/Automation/?page_id=7#comment-11794</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;https://mohamedradwan.com/about2/#comment-11784&quot;&gt;Khalid Hamid&lt;/a&gt;.
+
+I did.]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="https://mohamedradwan.com/about2/#comment-11784">Khalid Hamid</a>.</p>
+<p>I did.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on About2 by Mohamed Radwan		</title>
+		<link>https://mohamedradwan.com/about2/#comment-11793</link>
+
+		<dc:creator><![CDATA[Mohamed Radwan]]></dc:creator>
+		<pubDate>Mon, 11 Jan 2021 09:15:37 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/Automation/?page_id=7#comment-11793</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;https://mohamedradwan.com/about2/#comment-11783&quot;&gt;Khalid Hamid&lt;/a&gt;.
+
+It&#039;s not available now]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="https://mohamedradwan.com/about2/#comment-11783">Khalid Hamid</a>.</p>
+<p>It&#8217;s not available now</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on About2 by Syed Mahmood Ali		</title>
+		<link>https://mohamedradwan.com/about2/#comment-11786</link>
+
+		<dc:creator><![CDATA[Syed Mahmood Ali]]></dc:creator>
+		<pubDate>Sat, 14 Nov 2020 11:25:11 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/Automation/?page_id=7#comment-11786</guid>
+
+					<description><![CDATA[Hi Mohammad Sir, Slam
+Can you please help me out with this error. Please give your precious time to look into it, as i am a new learner of Azure DevOps.
+
+2020-11-14T11:19:36.3873296Z ##[error]Error: The process &#039;C:\hostedtoolcache\windows\terraform\0.12.21\x64\terraform.exe&#039; failed with exit code 1
+2020-11-14T11:19:36.4058638Z ##[section]Finishing: Terraform :plan
+
+I am getting this error in Terraform Plan in Azure DevOps, searched many articles but no one is correcting this. Please sugest me any changes to be done, or what is the root cause of such errors.
+
+Regards
+Syed Mahmood Ali
+India]]></description>
+			<content:encoded><![CDATA[<p>Hi Mohammad Sir, Slam<br />
+Can you please help me out with this error. Please give your precious time to look into it, as i am a new learner of Azure DevOps.</p>
+<p>2020-11-14T11:19:36.3873296Z ##[error]Error: The process &#8216;C:\hostedtoolcache\windows\terraform\0.12.21\x64\terraform.exe&#8217; failed with exit code 1<br />
+2020-11-14T11:19:36.4058638Z ##[section]Finishing: Terraform :plan</p>
+<p>I am getting this error in Terraform Plan in Azure DevOps, searched many articles but no one is correcting this. Please sugest me any changes to be done, or what is the root cause of such errors.</p>
+<p>Regards<br />
+Syed Mahmood Ali<br />
+India</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on About2 by Khalid Hamid		</title>
+		<link>https://mohamedradwan.com/about2/#comment-11784</link>
+
+		<dc:creator><![CDATA[Khalid Hamid]]></dc:creator>
+		<pubDate>Thu, 29 Oct 2020 12:25:12 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/Automation/?page_id=7#comment-11784</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;https://mohamedradwan.com/about2/#comment-11777&quot;&gt;Mohamed Radwan&lt;/a&gt;.
+
+Hi Radwan,
+
+Can you please reply to my email?
+
+Thanks,
+Khalid]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="https://mohamedradwan.com/about2/#comment-11777">Mohamed Radwan</a>.</p>
+<p>Hi Radwan,</p>
+<p>Can you please reply to my email?</p>
+<p>Thanks,<br />
+Khalid</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on About2 by Khalid Hamid		</title>
+		<link>https://mohamedradwan.com/about2/#comment-11783</link>
+
+		<dc:creator><![CDATA[Khalid Hamid]]></dc:creator>
+		<pubDate>Tue, 27 Oct 2020 13:36:37 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/Automation/?page_id=7#comment-11783</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;https://mohamedradwan.com/about2/#comment-11777&quot;&gt;Mohamed Radwan&lt;/a&gt;.
+
+Hi Mohamed,
+
+I am wondering if it is possible to get access to this materials or it is just for Microsoft employees.
+
+https://mohamedradwan.com/2019/05/21/how-to-prepare-for-exam-az-400-microsoft-azure-devops-solutions-with-final-exam-revision/
+
+Thanks,
+Khalid]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="https://mohamedradwan.com/about2/#comment-11777">Mohamed Radwan</a>.</p>
+<p>Hi Mohamed,</p>
+<p>I am wondering if it is possible to get access to this materials or it is just for Microsoft employees.</p>
+<p><a href="https://mohamedradwan.com/2019/05/21/how-to-prepare-for-exam-az-400-microsoft-azure-devops-solutions-with-final-exam-revision/" rel="ugc">https://mohamedradwan.com/2019/05/21/how-to-prepare-for-exam-az-400-microsoft-azure-devops-solutions-with-final-exam-revision/</a></p>
+<p>Thanks,<br />
+Khalid</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on About2 by Mohamed Radwan		</title>
+		<link>https://mohamedradwan.com/about2/#comment-11777</link>
+
+		<dc:creator><![CDATA[Mohamed Radwan]]></dc:creator>
+		<pubDate>Wed, 02 Sep 2020 08:52:28 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/Automation/?page_id=7#comment-11777</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;https://mohamedradwan.com/about2/#comment-11775&quot;&gt;Ahtesh&lt;/a&gt;.
+
+Try to use another tool like the following:
+https://mohamedradwan.com/2017/09/15/tfs-2017-migration-to-vsts-with-vsts-sync-migrator/]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="https://mohamedradwan.com/about2/#comment-11775">Ahtesh</a>.</p>
+<p>Try to use another tool like the following:<br />
+<a href="https://mohamedradwan.com/2017/09/15/tfs-2017-migration-to-vsts-with-vsts-sync-migrator/" rel="ugc">https://mohamedradwan.com/2017/09/15/tfs-2017-migration-to-vsts-with-vsts-sync-migrator/</a></p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		Comment on About2 by Ahtesh		</title>
+		<link>https://mohamedradwan.com/about2/#comment-11775</link>
+
+		<dc:creator><![CDATA[Ahtesh]]></dc:creator>
+		<pubDate>Thu, 27 Aug 2020 03:27:46 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost/Automation/?page_id=7#comment-11775</guid>
+
+					<description><![CDATA[Hello Radwan,
+  Regarding Work Item Migrator: https://github.com/microsoft/vsts-work-item-migrator
+Video Link: https://www.youtube.com/watch?v=aHbiLYUfomc&#038;feature=youtu.be
+
+I am migrating Work Items from TFS to AZURE DevOps.
+The migrator tool is allowing  migration of QUERY TYPE  &quot;FLAT LIST of Work Items&quot;  only.
+Because of this, am not able to migrate the relationships (Parent/Child Work items relations).
+
+The command I used : dotnet WiMigrator.dll --validate configuration.json
+The Error message is:
+[Error   @08.40.34.261] Validation error:. Only flat queries are supported for migration. Only flat queries are supported for migration
+
+Is there any Work Around for this ? Kindly suggest.
+
+Thanks.
+Regards,
+Ahtesh (ahtesh.inamdar@in.abb.com)]]></description>
+			<content:encoded><![CDATA[<p>Hello Radwan,<br />
+  Regarding Work Item Migrator: <a href="https://github.com/microsoft/vsts-work-item-migrator" rel="nofollow ugc">https://github.com/microsoft/vsts-work-item-migrator</a><br />
+Video Link: <a href="https://www.youtube.com/watch?v=aHbiLYUfomc&#038;feature=youtu.be" rel="nofollow ugc">https://www.youtube.com/watch?v=aHbiLYUfomc&#038;feature=youtu.be</a></p>
+<p>I am migrating Work Items from TFS to AZURE DevOps.<br />
+The migrator tool is allowing  migration of QUERY TYPE  &#8220;FLAT LIST of Work Items&#8221;  only.<br />
+Because of this, am not able to migrate the relationships (Parent/Child Work items relations).</p>
+<p>The command I used : dotnet WiMigrator.dll &#8211;validate configuration.json<br />
+The Error message is:<br />
+[Error   @08.40.34.261] Validation error:. Only flat queries are supported for migration. Only flat queries are supported for migration</p>
+<p>Is there any Work Around for this ? Kindly suggest.</p>
+<p>Thanks.<br />
+Regards,<br />
+Ahtesh (ahtesh.inamdar@in.abb.com)</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

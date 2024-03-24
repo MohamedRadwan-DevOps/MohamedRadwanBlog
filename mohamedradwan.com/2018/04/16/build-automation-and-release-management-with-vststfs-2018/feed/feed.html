@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Build Automation and Release Management with VSTS/TFS 2018	</title>
+	<atom:link href="https://mohamedradwan.com/2018/04/16/build-automation-and-release-management-with-vststfs-2018/feed/" rel="self" type="application/rss+xml" />
+	<link>https://mohamedradwan.com/2018/04/16/build-automation-and-release-management-with-vststfs-2018/</link>
+	<description>Automate your best experience</description>
+	<lastBuildDate>Wed, 10 Jul 2019 09:54:55 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.3</generator>
+	<item>
+		<title>
+		By: Mohamed Radwan		</title>
+		<link>https://mohamedradwan.com/2018/04/16/build-automation-and-release-management-with-vststfs-2018/#comment-4200</link>
+
+		<dc:creator><![CDATA[Mohamed Radwan]]></dc:creator>
+		<pubDate>Fri, 27 Apr 2018 10:27:18 +0000</pubDate>
+		<guid isPermaLink="false">http://mohamedradwan.com/?p=8394#comment-4200</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;https://mohamedradwan.com/2018/04/16/build-automation-and-release-management-with-vststfs-2018/#comment-4168&quot;&gt;Alex&lt;/a&gt;.
+
+Hi Alex,
+No problem and thank you too!
+I looked at the answer in Stackoverflow and I greed with them, the best option always using NuGet library instead of shared project.
+
+Thanks]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="https://mohamedradwan.com/2018/04/16/build-automation-and-release-management-with-vststfs-2018/#comment-4168">Alex</a>.</p>
+<p>Hi Alex,<br />
+No problem and thank you too!<br />
+I looked at the answer in Stackoverflow and I greed with them, the best option always using NuGet library instead of shared project.</p>
+<p>Thanks</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Alex		</title>
+		<link>https://mohamedradwan.com/2018/04/16/build-automation-and-release-management-with-vststfs-2018/#comment-4169</link>
+
+		<dc:creator><![CDATA[Alex]]></dc:creator>
+		<pubDate>Sun, 22 Apr 2018 23:51:29 +0000</pubDate>
+		<guid isPermaLink="false">http://mohamedradwan.com/?p=8394#comment-4169</guid>
+
+					<description><![CDATA[The more detailed question is here:
+
+https://stackoverflow.com/questions/49971792/reference-to-shared-project-in-tfs-2015
+
+Thank You]]></description>
+			<content:encoded><![CDATA[<p>The more detailed question is here:</p>
+<p><a href="https://stackoverflow.com/questions/49971792/reference-to-shared-project-in-tfs-2015" rel="nofollow ugc">https://stackoverflow.com/questions/49971792/reference-to-shared-project-in-tfs-2015</a></p>
+<p>Thank You</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Alex		</title>
+		<link>https://mohamedradwan.com/2018/04/16/build-automation-and-release-management-with-vststfs-2018/#comment-4168</link>
+
+		<dc:creator><![CDATA[Alex]]></dc:creator>
+		<pubDate>Sun, 22 Apr 2018 22:57:31 +0000</pubDate>
+		<guid isPermaLink="false">http://mohamedradwan.com/?p=8394#comment-4168</guid>
+
+					<description><![CDATA[Hi Mohamed,
+First of all, Thank You so much on the series that you put out for DevOps practices.
+It has really helped me out well.
+
+I have an elaborate question. If you have some time, then I&#039;d really appreciate your help.
+At my workplace, there are a lot of console applications, and all of them use a shared project. The shared project along with the other applications are in TFS. When I reference the shared project in my application, I can see the reference in both the .sln and .csproj file. It path goes like: ..\..\..\shared\commonproject\commonproject.csproj . Meaning it goes four levels up from the solution folder, finds that shared folder and subsequently the .csproj file. It works fine on the local.
+But when I create a build definition, it all blows up. Because the TFS build Get Sources step brings the Shared Project folder to the .sln folder level as the Repository Mapping is made to both application folder and shared project folder to the buildSourcesdirectory and buildSorcesdirectory/shared respectively. So when it tries to go four levels up to find the .csproj file, it simply won&#039;t be able to do that because in the build server the common .csproj file is at one level down (shared\commonproject\commonproject.csproj). 
+So If I edit the .sln and .csproj file to remove the four levels up path, then it builds on the server but won&#039;t build on the local. So I can&#039;t seem to make it work on both local and TFS server.
+Is there any way to fix this problem? 
+One possible solution that I can think of is copying the shared project four levels up in the build server before it starts the build and keep the path in the .sln and .csproj untouched. But how can I design that step in TFS to copy shared project four levels up from the place the source code files for the application are copied to.
+Any kind of solution would be greatly appreciated.
+Thank you]]></description>
+			<content:encoded><![CDATA[<p>Hi Mohamed,<br />
+First of all, Thank You so much on the series that you put out for DevOps practices.<br />
+It has really helped me out well.</p>
+<p>I have an elaborate question. If you have some time, then I&#8217;d really appreciate your help.<br />
+At my workplace, there are a lot of console applications, and all of them use a shared project. The shared project along with the other applications are in TFS. When I reference the shared project in my application, I can see the reference in both the .sln and .csproj file. It path goes like: ..\..\..\shared\commonproject\commonproject.csproj . Meaning it goes four levels up from the solution folder, finds that shared folder and subsequently the .csproj file. It works fine on the local.<br />
+But when I create a build definition, it all blows up. Because the TFS build Get Sources step brings the Shared Project folder to the .sln folder level as the Repository Mapping is made to both application folder and shared project folder to the buildSourcesdirectory and buildSorcesdirectory/shared respectively. So when it tries to go four levels up to find the .csproj file, it simply won&#8217;t be able to do that because in the build server the common .csproj file is at one level down (shared\commonproject\commonproject.csproj).<br />
+So If I edit the .sln and .csproj file to remove the four levels up path, then it builds on the server but won&#8217;t build on the local. So I can&#8217;t seem to make it work on both local and TFS server.<br />
+Is there any way to fix this problem?<br />
+One possible solution that I can think of is copying the shared project four levels up in the build server before it starts the build and keep the path in the .sln and .csproj untouched. But how can I design that step in TFS to copy shared project four levels up from the place the source code files for the application are copied to.<br />
+Any kind of solution would be greatly appreciated.<br />
+Thank you</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

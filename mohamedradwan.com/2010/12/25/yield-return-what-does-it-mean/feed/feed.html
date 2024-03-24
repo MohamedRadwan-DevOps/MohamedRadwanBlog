@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Yield return, what does it mean?	</title>
+	<atom:link href="https://mohamedradwan.com/2010/12/25/yield-return-what-does-it-mean/feed/" rel="self" type="application/rss+xml" />
+	<link>https://mohamedradwan.com/2010/12/25/yield-return-what-does-it-mean/</link>
+	<description>Automate your best experience</description>
+	<lastBuildDate>Wed, 16 Nov 2011 00:37:34 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.3</generator>
+	<item>
+		<title>
+		By: mohammedumar		</title>
+		<link>https://mohamedradwan.com/2010/12/25/yield-return-what-does-it-mean/#comment-103</link>
+
+		<dc:creator><![CDATA[mohammedumar]]></dc:creator>
+		<pubDate>Wed, 16 Nov 2011 00:37:34 +0000</pubDate>
+		<guid isPermaLink="false">http://mohamedradwan.com/?p=490#comment-103</guid>
+
+					<description><![CDATA[Exactly Radwan, any time you want to return collection its better to return it lazy, better for performance and for usability,
+
+Think about it, why return the whole collection at once while you can lazy return it ? and support Linq2Object laziness ? 
+
+This apply to repositories or any other logic software architecture not only when making extensions. as there is many situations when you must for-each or loops no matter what, where and select cant be out of the box solution to all situations.]]></description>
+			<content:encoded><![CDATA[<p>Exactly Radwan, any time you want to return collection its better to return it lazy, better for performance and for usability,</p>
+<p>Think about it, why return the whole collection at once while you can lazy return it ? and support Linq2Object laziness ? </p>
+<p>This apply to repositories or any other logic software architecture not only when making extensions. as there is many situations when you must for-each or loops no matter what, where and select cant be out of the box solution to all situations.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Mohamed Radwan		</title>
+		<link>https://mohamedradwan.com/2010/12/25/yield-return-what-does-it-mean/#comment-102</link>
+
+		<dc:creator><![CDATA[Mohamed Radwan]]></dc:creator>
+		<pubDate>Tue, 15 Nov 2011 23:52:06 +0000</pubDate>
+		<guid isPermaLink="false">http://mohamedradwan.com/?p=490#comment-102</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;https://mohamedradwan.com/2010/12/25/yield-return-what-does-it-mean/#comment-101&quot;&gt;mohammedumar&lt;/a&gt;.
+
+Thanks for you comment Mohamed, but you missed my intent here!
+All what I want to say as long as I just use the built in extension LINQ methods, no need to write for each by hand, because I just use the extension method like where or select, but I didn&#039;t say by using select or where it will not use for each, I mean I will not write for each as before, I hope you get my point :-) 
+
+This of course unless I create my own extension or I just need to iterate over any collection to return some of them in this case sure if you are not use yield it&#039;s a crime as you said :-)]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="https://mohamedradwan.com/2010/12/25/yield-return-what-does-it-mean/#comment-101">mohammedumar</a>.</p>
+<p>Thanks for you comment Mohamed, but you missed my intent here!<br />
+All what I want to say as long as I just use the built in extension LINQ methods, no need to write for each by hand, because I just use the extension method like where or select, but I didn&#8217;t say by using select or where it will not use for each, I mean I will not write for each as before, I hope you get my point 🙂 </p>
+<p>This of course unless I create my own extension or I just need to iterate over any collection to return some of them in this case sure if you are not use yield it&#8217;s a crime as you said 🙂</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: mohammedumar		</title>
+		<link>https://mohamedradwan.com/2010/12/25/yield-return-what-does-it-mean/#comment-101</link>
+
+		<dc:creator><![CDATA[mohammedumar]]></dc:creator>
+		<pubDate>Tue, 15 Nov 2011 17:35:57 +0000</pubDate>
+		<guid isPermaLink="false">http://mohamedradwan.com/?p=490#comment-101</guid>
+
+					<description><![CDATA[Very nice explanation bro, 
+But let’s discuss it more…..
+Thinking that yield is useless or its just to ease your job instead of writing more code is totally wrong.
+“Yield return, it’s a very strong keyword, in in spite of I will not use it because, with LINQ to object you don’t need for-each or yield return”.
+This is the exact thing I don’t agree with you on. every time you use where or select or mostly any LINQ extension method you use for-each
+
+check my post here, i couldn&#039;t post much in the comment:
+
+http://mohammedumar.wordpress.com/2011/11/15/why-the-yield-return-is-important/]]></description>
+			<content:encoded><![CDATA[<p>Very nice explanation bro,<br />
+But let’s discuss it more…..<br />
+Thinking that yield is useless or its just to ease your job instead of writing more code is totally wrong.<br />
+“Yield return, it’s a very strong keyword, in in spite of I will not use it because, with LINQ to object you don’t need for-each or yield return”.<br />
+This is the exact thing I don’t agree with you on. every time you use where or select or mostly any LINQ extension method you use for-each</p>
+<p>check my post here, i couldn&#8217;t post much in the comment:</p>
+<p><a href="http://mohammedumar.wordpress.com/2011/11/15/why-the-yield-return-is-important/" rel="nofollow ugc">http://mohammedumar.wordpress.com/2011/11/15/why-the-yield-return-is-important/</a></p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,9 @@
+    /*############ YOUTUBE FRONTEND STYLE ##################*/
+#TB_ajaxContent iframe{
+	margin:0px !important;
+	padding:0px !important;
+}
+#TB_ajaxContent{
+	padding:0px !important;
+	margin:0 auto !important;
+}
